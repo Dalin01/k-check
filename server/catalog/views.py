@@ -4,9 +4,9 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 @api_view(['GET'])
-def getRooms(request):
+def rooms_view(request):
   return Response({'Rooms': 'yes'})
 
 @api_view(['GET'])
-def getRoom(request, pk):
+def room_detail_view(request, pk):
   return Response({'pk': pk})

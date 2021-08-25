@@ -24,4 +24,4 @@ urlpatterns = [
     path('api/users/', include('account.urls')),
     path('api/catalog/', include('catalog.urls')),
     path('', RedirectView.as_view(url='api/users/', permanent=True))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
