@@ -1,14 +1,15 @@
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import { routes } from './routes';
 import Header from './components/Header/Header';
+import { Container } from 'react-bootstrap';
 
 const App = () => {
   return (
     <>
       <Header />
-      <Router>
+      <Container>
         <Switch>{routes}</Switch>
-      </Router>
+      </Container>
     </>
   );
 };

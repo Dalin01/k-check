@@ -11,9 +11,8 @@ class RoomType(models.Model):
 
 class Room(models.Model):
   createdBy = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='creator')
-  roomType = models.OneToOneField(RoomType,
-                                  help_text='Select a room type', 
-                                  on_delete=models.SET_NULL, null=True)
+  roomType = models.ForeignKey(RoomType, on_delete=models.SET_NULL, null=True, 
+                                  help_text='Select a room type')
   name = models.CharField(max_length=200)
   rating = models.DecimalField(max_digits=6, decimal_places=2, null=True)
   numReviews = models.IntegerField(default=0)

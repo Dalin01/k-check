@@ -2,11 +2,11 @@ export type Room = {
   id: number;
   availableAt: null | string;
   category: string;
-  createdAt: string;
-  createdBy: number;
+  createdAt: null | string;
+  createdBy: null | number;
   description: string;
   guest: null | string;
-  image: string;
+  image: null | string;
   name: string;
   numReviews: number;
   price: string;
